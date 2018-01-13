@@ -1,1 +1,8 @@
-h1 This is codetap blog
+extends _component/layout/layout
+block super-config
+    -
+        let title = 'Codetap Blog is Awesome!'
+        let description = `Finally, it's alive. Let's also hope I keep it updated`
+block awesome-content
+    h1=title
+    p=description
