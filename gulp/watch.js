@@ -66,6 +66,7 @@ const watch = ({
 
       // HTML
       gulp.watch([
+        path.join(taskTarget, '**/*.js'),
         path.join(taskTarget, '**/*.html')
       ], browserSync.reload);
     }

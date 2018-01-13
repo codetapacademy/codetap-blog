@@ -3,6 +3,63 @@ block super-config
     -
         let title = 'Codetap Blog is Awesome!'
         let description = `Finally, it's alive. Let's also hope I keep it updated`
+        let colorList = {
+            'cascade': {
+            colorNormal: '#95A5A6',
+            colorDark: '#7F8C8D',
+        },
+        
+        'zest': {
+            colorNormal: '#E67E22',
+            colorDark: '#D35400',
+        },
+        
+        'buttercup': {
+            colorNormal: '#F1C40F',
+            colorDark: '#F39C12',
+        },
+        
+        'pickled-bluewood': {
+            colorNormal: '#34495E',
+            colorDark: '#2C3E50',
+        },
+        
+        'wisteria': {
+            colorNormal: '#9B59B6',
+            colorDark: '#8E44AD',
+        },
+        
+        'shamrock': {
+            colorNormal: '#2ECC71',
+            colorDark: '#27AE60',
+        },
+        
+        'mountain-meadow': {
+            colorNormal: '#1ABC9C',
+            colorDark: '#16A085',
+        },
+        
+        'curious-blue': {
+            colorNormal: '#3498db',
+            colorDark: '#2980b9',
+        },
+        
+        'cinnabar': {
+            colorNormal: '#e74c3c',
+            colorDark: '#c0392b',
+        }
+        }
 block awesome-content
-    h1=title
-    p=description
+    h2 This is my landing page
+    p I intend to do this blog using dynamic themes
+    ul
+        each color, key in colorList
+            li
+                button.theme_button(
+                    style=`background-color: ${color.colorDark}`
+                    data-color-dark=color.colorDark, 
+                    data-color-normal=color.colorNormal
+                )=key
+
+    script
+        include _asset/js/color.js
