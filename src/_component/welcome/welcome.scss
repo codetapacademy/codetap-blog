@@ -7,3 +7,27 @@
     margin: 0.5rem 1rem;
     color: white;
 }
+
+.welcome__create-date {
+    text-align: center;
+    position: relative;
+    color: $color-twine;
+    width: 50%;
+    margin: 0 auto;
+
+    &:after {
+        position: relative;
+        content: attr(data-text);
+        padding: 0 1rem;
+        background-color: #fff;
+    }
+
+    &:before  {
+        content: '';
+        bottom: 0.5rem;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-bottom: 0.1rem solid $color-twine;
+    }
+}
