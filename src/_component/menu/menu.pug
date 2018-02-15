@@ -1,8 +1,8 @@
 div hello
-ul
+ul.menu__list
     each menu in data.menu
-        li
-            a(
+        li.menu__item
+            a.menu__link(
                 href=`/${menu.link}`,
                 title=menu.title
             )=menu.label
