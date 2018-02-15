@@ -1,0 +1,8 @@
+div hello
+ul
+    each menu in data.menu
+        li
+            a(
+                href=`/${menu.link}`,
+                title=menu.title
+            )=menu.label
