@@ -1,10 +1,38 @@
-.menu__list {
+.menu__wrapper {
+    background-color: $color-white;
     position: fixed;
     bottom: 0;
-    right: 0;
+    top: 0;
+    transition: 0.25s;
+    right: -100%;
+}
+
+.cb-menu {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+#toggle-menu:checked {
+
+    & + .menu__wrapper {
+        right: 0%;
+    }
+
+    & ~ label[for="toggle-menu"]:before {
+        content: "\ea0f";
+    }
+}
+
+.menu__hidden {
+    display: none;
+}
+
+.menu__list {
     list-style-type: none;
-    background-color: $color-white;
-    border: 0.1rem solid $color-dark;
+    margin-top: 2rem;
+    // border: 0.1rem solid $color-dark;
 }
 
 .menu__link {
@@ -14,7 +42,7 @@
 }
 
 .menu__item {
-    border-bottom: 0.1rem solid $color-dark;
+    // border-bottom: 0.1rem solid $color-dark;
 
     &:last-child {
         border-bottom: 0;

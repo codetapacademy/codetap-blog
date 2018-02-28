@@ -1,8 +1,18 @@
-div hello
-ul.menu__list
-    each menu in data.menu
-        li.menu__item
-            a.menu__link(
-                href=`/${menu.link}`,
-                title=menu.title
-            )=menu.label
+input.menu__hidden(
+    type="checkbox",
+    id="toggle-menu"
+)
+.menu__wrapper
+    //- div.cb-menu
+    //- div.cb-cross
+    ul.menu__list
+        each menu in data.menu
+            li.menu__item
+                a.menu__link(
+                    href=`/${menu.link}`,
+                    title=menu.title
+                )=menu.label
+label(
+    for="toggle-menu"
+).cb-menu
+
