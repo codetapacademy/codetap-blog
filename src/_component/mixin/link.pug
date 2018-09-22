@@ -1,0 +1,7 @@
+mixin link({link , title, label})
+    -
+        linkValue = link || 'http://codetap.io'
+    a(
+        href=linkValue,
+        title=title
+    )=label
